@@ -1,0 +1,246 @@
+
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+.container{
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  line-height: 20px;
+  font-size: 14px;
+}
+
+.wrapper{
+  background-color: #d8dae4;
+  width:800px;
+  display: flex;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  min-height: 100vh;
+  z-index: 1;
+}
+
+.resume {
+  padding:10px;
+    display: flex;
+    justify-content: center;
+    width:100%;
+    height: auto;
+  }
+  
+  .left-column {
+    width:270px;
+    background-color: #4b4545;
+    color: rgb(218, 213, 213);
+  }
+
+  .left-column-content .item{
+    padding: 20px 0;
+	  border-bottom: 1px solid #000;
+  }
+
+  .left-column-content .item .title{
+    color: #fff;
+	  text-transform: uppercase;
+	  font-weight: 700;
+	  font-size: 16px;
+   	margin-bottom: 10px;
+	  letter-spacing: 4px;
+  }
+
+  .left-column-content .item:first-child{
+    display: none;
+  }
+
+  .left-column-content .item .info .skills{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  .left-column-content .item .info .skills .progress_bar{
+    width: 65%;
+    height: 13px;
+    background-color: transparent;
+    padding: 4px 6px;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #444;
+    border-radius: 15px;
+    display: flex;
+    align-items: end;
+  }
+
+  .left-column-content .item .info .skills .progress_line{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -1px -1px 2px #222222, 1px 1px 2px #111111;
+  }
+
+  .left-column-content .item .info .skills .progress_line::after{
+    position: absolute;
+    content: attr(value);
+    top: -20px;
+    right: 0px;
+    transform: translateX(-50%);
+    color: #aaabb0;
+    font-size: 10px;
+  }
+
+  .left-column-content .item .info .subinfo{
+    margin-bottom: 10px;
+  }
+
+  .left-column-content .item .info .skills:last-child{
+    margin-bottom: 0;
+  }
+
+  .left-column-content{
+    padding: 20px 30px;
+  }
+  
+  .right-column {
+    width: 510px;
+    padding: 40px;
+    background-color: transparent;
+  }
+
+  .right-column .logo{
+    position:absolute;
+    left:700px;
+    top:90px;
+    z-index: -1;
+    display: none;
+
+  }
+
+  .right-column .logo img{
+    width:150px;
+
+  }
+  
+  .dp {
+  width: 100%;
+  }
+
+  .right-column .item-name{
+    margin: 20px 0px;
+  }
+
+  .right-column .item-name .name{
+    font-size: 32px;
+    color: #222222;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding-bottom: 5px;
+    z-index: 10;
+  }
+
+  .right-column .item-name .role{
+    font-size: 20px;
+    color: #222222;
+  }
+
+  .right-column .item{
+    margin-bottom: 20px;
+  }
+
+  .right-column .item .title{
+    color: #222222;
+	  text-transform: uppercase;
+	  font-weight: 700;
+	  font-size: 16px;
+   	margin-bottom: 10px;
+	  letter-spacing: 4px;
+  }
+
+  .right-column .item .info .data{
+    display: flex;
+    padding-bottom:10px;
+  }
+
+  .right-column .item .objective-info{
+    letter-spacing: 1px;
+    margin-left: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #222222;
+  }
+
+  .right-column .item .info .data .year{
+    flex-basis: 20%;
+  }
+
+  .right-column .item .info .data .content{
+    flex-basis: 80%;
+    padding-left: 10px;
+    border-left: 2px solid #222222;
+  }
+
+  .right-column .item .info .data .content .magic-year{
+    display: none;
+  }
+
+  .right-column .item .interest-info{
+    display: flex;
+    justify-content: space-evenly;
+    margin:20px 0;
+  }
+
+  .right-column .item .interest-info .int_icon{
+    font-size: 25px;
+    padding-bottom: 5px;
+  }
+
+  @media screen and (max-width:800px){
+     .resume{
+      display: flex;
+      flex-direction: column;
+     }
+     .left-column{
+      width:100%;
+     }
+     .left-column-content .item:first-child{
+      display: flex;
+      flex-direction: column;
+     }
+     .left-column-content .item .name{
+      font-size: 36px;
+      text-transform: uppercase;
+      color: #fff;
+      letter-spacing: 4px;
+      font-weight: 600;
+      padding-bottom: 5px;
+      line-height: 35px;
+     }
+
+     .right-column{
+      width: 100%;
+     }
+
+     .right-column .item-name{
+      display: none;
+     }
+  }
+
+  @media screen and (max-width:485px){
+    .right-column .item .info .data .year{
+      display: none;
+    }
+    .right-column .item .info .data .content{
+      border-left: none;
+      padding-left: 20px;
+      flex-basis: 90%;
+    }
+    .right-column .item .info .data .content .magic-year{
+      display: flex;
+      font-weight: 600;
+    }
+  }
+
+
